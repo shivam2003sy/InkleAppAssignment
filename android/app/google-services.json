@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977471054158",
+    "project_id": "inkle-a1473",
+    "storage_bucket": "inkle-a1473.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977471054158:android:cd455c187264918a663e1f",
+        "android_client_info": {
+          "package_name": "Iikle.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977471054158-1r0opf4r4k35qmk554grs5pdf9c2h4ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTBohvnHQuv9YS0205s-no2wEoJr9sB7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977471054158-1r0opf4r4k35qmk554grs5pdf9c2h4ki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
