@@ -7,12 +7,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:977471054158:android:cd455c187264918a663e1f",
+        "mobilesdk_app_id": "1:977471054158:android:73475a06ebbc1156663e1f",
         "android_client_info": {
-          "package_name": "Iikle.app"
+          "package_name": "com.inkleapp"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "977471054158-53eiq5ulevlvm7sdvq4p926f71lore0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inkleapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
         {
           "client_id": "977471054158-1r0opf4r4k35qmk554grs5pdf9c2h4ki.apps.googleusercontent.com",
           "client_type": 3
