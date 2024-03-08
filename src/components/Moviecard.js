@@ -1,9 +1,15 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Touchable, TouchableOpacity } from 'react-native';
 import {Dimensions} from 'react-native';
 const windowWidth = Dimensions.get('window').width;
+import { useNavigation } from '@react-navigation/native';
 function MovieCard({ movie }) {
+    const navigation = useNavigation();
+    const handlePress = () => {
+        navigation.navigate('SingleCard', {movie});
+    }
     return (
+        <TouchableOpacity onPress={handlePress} style={styles.container}>
         <View style={styles.container}>
             <Image
                 style={styles.poster}
@@ -12,11 +18,12 @@ function MovieCard({ movie }) {
                 }}
             />
             <View style={styles.detailsContainer}>
-                <Text style={styles.title}>{movie.title}</Text>
+                {movie.title ? <Text style={styles.title}>{movie.title}</Text> : <Text style={styles.title}>{movie.name}</Text>}
                 <Text style={styles.releaseDate}>Release Date: {movie.release_date}</Text>
                 <Text style={styles.voteAverage}>Vote Average: {movie.vote_average}</Text>
             </View>
         </View>
+        </TouchableOpacity>
     );
 }
 

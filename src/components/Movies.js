@@ -3,6 +3,7 @@ import Moviecard from "./Moviecard";
 import { FlatList, View  , ScrollView} from "react-native";
 
 const Movies = ({ movies }) => {
+    console.log(movies);
    
     return (
         <FlatList

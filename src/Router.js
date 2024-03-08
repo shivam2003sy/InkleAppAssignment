@@ -7,6 +7,8 @@ import SearchScreen from './Screens/SearchScreen';
 import Home from './Screens/Home';
 import Login from './Screens/Login';
 
+import SingleCard from './components/SingleCard';
+
 
 import { useDispatch } from 'react-redux';
 import { loginSuccess } from './actions/authActions';
@@ -28,8 +30,8 @@ const Router = () => {
       }
     };
     checkAuth();
-  }
-  , [dispatch]);
+  }, [dispatch]);
+
   return (
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
@@ -39,9 +41,17 @@ const Router = () => {
           }}>
           {isAuthenticated ? (
             <>
-            <Stack.Screen name="Home" component={Home} />
+              <Stack.Screen name="Home" component={Home} />
 
-            <Stack.Screen name='SearchScreen' component={SearchScreen} />
+              <Stack.Screen
+                name="SearchScreen"
+                component={SearchScreen}
+                options={{ headerShown: true }} // Show header for SearchScreen
+              />
+              <Stack.Screen name='SingleCard' 
+              component={SingleCard}
+              options={{headerShown: true}}
+              />
             </>
           ) : (
             <Stack.Screen name="Login" component={Login} />

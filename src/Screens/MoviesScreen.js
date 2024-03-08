@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, ScrollView, StyleSheet, ActivityIndicator } from 'react-native';
 import { getPopularMovies, getTopRatedMovies, getUpcomingMovies, getNowPlayingMovies } from '../services/api';
 import Movies from '../components/Movies';
+import SearchBar from '../components/SearchBar';
 
 const MoviesScreen = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -36,6 +37,9 @@ const MoviesScreen = () => {
 
   return (
     <ScrollView style ={styles.continer}>
+      <View style={styles.section}>
+        <SearchBar type="movies" />
+      </View>
       <View style={styles.section}>
         <Text style={styles.header}>Trending Movies</Text>
         <Movies movies={trendingMovies} />

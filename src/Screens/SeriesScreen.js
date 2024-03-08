@@ -3,6 +3,7 @@ import { View, Text , StyleSheet , ActivityIndicator  , ScrollView} from 'react-
 
 import { getPopularTvShows, getTopRatedTvShows, getOnTheAirTvShows, getAiringTodayTvShows} from '../services/api';
 import Movies from '../components/Movies';
+import SearchBar from '../components/SearchBar';
 
 const SeriesScreen = () => {
   const [trendingSeries, setTrendingSeries] = useState([]);
@@ -17,8 +18,6 @@ const SeriesScreen = () => {
       const onAirSeriesData = await getOnTheAirTvShows();
       const topRatedSeriesData = await getTopRatedTvShows();
       const popularSeriesData = await getPopularTvShows();
-
-
       setTrendingSeries(trendingSeriesData);
       setOnAirSeries(onAirSeriesData);
       setTopRatedSeries(topRatedSeriesData);
@@ -39,6 +38,9 @@ const SeriesScreen = () => {
 
   return (
     <ScrollView style ={styles.continer}>
+      <View style={styles.section}>
+        <SearchBar  type="series" />
+      </View>
       <View style={styles.section}>
         <Text style={styles.header}>Trending Series</Text>
         <Movies movies={trendingSeries} />
